@@ -26,7 +26,7 @@ Hämtar vilka år som har data för ett eller flera
 nyckeltal i Kolada.
 }
 \examples{
-\dontrun{
+\donttest{
 tillgangliga_ar("N01926")
 
 tillgangliga_ar(

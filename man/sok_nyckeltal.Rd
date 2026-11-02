@@ -23,7 +23,7 @@ Flera ord i samma sökfras kombineras med OCH.
 Flera sökfraser kombineras med ELLER.
 }
 \examples{
-\dontrun{
+\donttest{
 sok_nyckeltal()
 sok_nyckeltal("förskola")
 sok_nyckeltal("kostnad förskola")

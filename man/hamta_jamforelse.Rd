@@ -54,7 +54,7 @@ SKR-kommungrupp, en grupp utifrån invånarantal eller någon av
 Koladas grupper för liknande kommuner.
 }
 \examples{
-\dontrun{
+\donttest{
 
 hamta_jamforelse(
   nyckeltal = "N01926",

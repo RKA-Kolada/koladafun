@@ -19,7 +19,7 @@ A data.frame with municipalities and regions.
 English wrapper for \code{\link[=hamta_kommuner]{hamta_kommuner()}}.
 }
 \examples{
-\dontrun{
+\donttest{
 get_municipalities()
 get_municipalities(type = "K")
 get_municipalities(search = "Han")

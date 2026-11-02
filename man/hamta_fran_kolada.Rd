@@ -60,22 +60,22 @@ Kommun kan anges antingen med kommunkod eller kommunnamn,
 exempelvis \code{"0136"} eller \code{"Haninge"}.
 }
 \examples{
-\dontrun{
+\donttest{
 
 hamta_fran_kolada(
   nyckeltal = "N01926"
 )
-
+}
 hamta_fran_kolada(
   nyckeltal = "N01926",
   kommun = "Haninge"
 )
-
+\donttest{
 hamta_fran_kolada(
   nyckeltal = "N01926",
   kommuntyp = "K"
 )
-
+}
 hamta_fran_kolada(
   nyckeltal = "N01926",
   kommun = "Haninge",
@@ -83,6 +83,6 @@ hamta_fran_kolada(
   kon = "K"
 )
 
-}
+
 
 }

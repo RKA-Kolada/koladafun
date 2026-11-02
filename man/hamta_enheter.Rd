@@ -83,7 +83,7 @@ fastigheter \tab V60
 }
 }
 \examples{
-\dontrun{
+\donttest{
 # Hämta alla förskolor i Haninge
 hamta_enheter(
   verksamhet = "Förskola",
@@ -109,7 +109,7 @@ hamta_enheter(
   verksamhet = "V11",
   nyckeltal = "N11808",
   ar = 2025,
-  kommun = "Montessori"
+  sok = "Montessori"
 )
 }
 

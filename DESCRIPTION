@@ -1,6 +1,6 @@
 Package: koladafun
 Title: Funktioner för Koladata
-Version: 0.1.0
+Version: 0.1.1
 Depends:
     R (>= 4.1.0)
 Authors@R: 
@@ -10,8 +10,15 @@ Authors@R:
         email = "nejdet.eken@rka.nu",
         role = c("aut", "cre")
     )
-Description: Hjälpfunktioner för mer strukturerade hämtningar av statistik
-    från databasen Kolada.
+Description: Provides functions for retrieving, exploring and analyzing
+    statistics from Kolada, a Swedish database of key performance
+    indicators for municipalities and regions. The package uses the
+    Kolada API to retrieve statistical data, indicator metadata and
+    organizational unit information. Users can filter data by municipality,
+    region, year and gender, identify the latest available observations,
+    calculate changes over time and compare municipalities using
+    predefined comparison groups. Functions are available with both
+    Swedish and English names.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

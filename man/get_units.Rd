@@ -91,7 +91,7 @@ properties \tab V60
 }
 }
 \examples{
-\dontrun{
+\donttest{
 # Get all preschools in Haninge
 get_units(
   activity = "preschool",

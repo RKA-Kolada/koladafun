@@ -264,22 +264,25 @@
 #'   nyckeltals-ID, nyckeltalsnamn, år, värde, kön och status.
 #'
 #' @examples
-#' \dontrun{
 #'
+#'\donttest{
 #' hamta_fran_kolada(
 #'   nyckeltal = "N01926"
 #' )
+#'}
 #'
 #' hamta_fran_kolada(
 #'   nyckeltal = "N01926",
 #'   kommun = "Haninge"
 #' )
 #'
+#'\donttest{
 #' hamta_fran_kolada(
 #'   nyckeltal = "N01926",
 #'   kommuntyp = "K"
 #' )
 #'
+#'}
 #' hamta_fran_kolada(
 #'   nyckeltal = "N01926",
 #'   kommun = "Haninge",
@@ -287,7 +290,7 @@
 #'   kon = "K"
 #' )
 #'
-#' }
+#'
 #'
 #' @export
 hamta_fran_kolada <- function(
@@ -729,12 +732,12 @@ hamta_fran_kolada <- function(
 #' @return En data.frame med nyckeltalsmetadata.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' sok_nyckeltal()
 #' sok_nyckeltal("förskola")
 #' sok_nyckeltal("kostnad förskola")
 #' sok_nyckeltal(c("N01926", "N17448"))
-#' }
+#'
 #'
 #' @export
 sok_nyckeltal <- function(
@@ -941,12 +944,11 @@ sok_nyckeltal <- function(
 #' @return En data.frame med områdeskod, namn och typ.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' hamta_kommuner()
 #' hamta_kommuner(typ = "K")
 #' hamta_kommuner(typ = "R")
 #' hamta_kommuner(sok = "Han")
-#' }
 #'
 #' @export
 hamta_kommuner <- function(
@@ -1051,14 +1053,14 @@ hamta_kommuner <- function(
 #' @return En data.frame med nyckeltals-ID och tillgängliga år.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' tillgangliga_ar("N01926")
+#'}
 #'
 #' tillgangliga_ar(
 #'   "N01926",
 #'   kommun = "Haninge"
 #' )
-#' }
 #'
 #' @export
 tillgangliga_ar <- function(
@@ -1115,7 +1117,7 @@ tillgangliga_ar <- function(
 #' @return En data.frame med senaste tillgängliga observation.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' senaste_varde(
 #'   nyckeltal = "N01926",
 #'   kommun = "Haninge"
@@ -1126,7 +1128,7 @@ tillgangliga_ar <- function(
 #'   kommun = "Haninge",
 #'   bortfall = TRUE
 #' )
-#' }
+#'
 #'
 #' @export
 senaste_varde <- function(
@@ -1240,7 +1242,6 @@ senaste_varde <- function(
 #'   absolut förändring och procentuell förändring.
 #'
 #' @examples
-#' \dontrun{
 #'
 #' forandring(
 #'   nyckeltal = "N01926",
@@ -1258,7 +1259,6 @@ senaste_varde <- function(
 #'   kon = "T"
 #' )
 #'
-#' }
 #'
 #' @export
 forandring <- function(
@@ -1440,7 +1440,6 @@ forandring <- function(
 #'   i jämförelsegruppen och, om valt, gruppens ovägda medel.
 #'
 #' @examples
-#' \dontrun{
 #'
 #' hamta_jamforelse(
 #'   nyckeltal = "N01926",
@@ -1475,8 +1474,6 @@ forandring <- function(
 #'   ar = 2025,
 #'   verksamhet = "förskola"
 #' )
-#'
-#' }
 #'
 #' @export
 hamta_jamforelse <- function(
@@ -1951,37 +1948,24 @@ hamta_jamforelse <- function(
         ")"
       )
 
-      cat(
-        "\nV\u00e4lj grupp f\u00f6r liknande kommuner f\u00f6r ",
-        kommun_namn,
-        ":\n\n",
-        sep = ""
-      )
-
-      for (i in seq_along(meny_text)) {
-        cat(
-          i,
-          ": ",
-          meny_text[i],
-          "\n",
-          sep = ""
+      if (!interactive()) {
+        stop(
+          "Ange 'verksamhet' för att välja jämförelsegrupp ",
+          "vid icke-interaktiv körning.",
+          call. = FALSE
         )
       }
 
-      cat("\n")
-
-      val <- suppressWarnings(
-        as.integer(
-          readline("Selection: ")
+      val <- utils::menu(
+        choices = meny_text,
+        title = paste0(
+          "Välj grupp för liknande kommuner för ",
+          kommun_namn
         )
       )
 
-      if (
-        is.na(val) ||
-        val < 1 ||
-        val > length(meny_text)
-      ) {
-        stop("Ogiltigt val.")
+      if (val == 0) {
+        stop("Ingen jämförelsegrupp valdes.", call. = FALSE)
       }
 
       vald_grupp <- liknande_grupper[
@@ -2279,7 +2263,7 @@ hamta_jamforelse <- function(
 #' nyckeltalsvärden på enhetsnivå.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' # Hämta alla förskolor i Haninge
 #' hamta_enheter(
 #'   verksamhet = "Förskola",
@@ -2305,9 +2289,8 @@ hamta_jamforelse <- function(
 #'   verksamhet = "V11",
 #'   nyckeltal = "N11808",
 #'   ar = 2025,
-#'   kommun = "Montessori"
+#'   sok = "Montessori"
 #' )
-#' }
 #'
 #' @export
 hamta_enheter <- function(
@@ -2957,13 +2940,12 @@ hamta_enheter <- function(
 #' @return A data.frame with data from Kolada.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' get_from_kolada(
 #'   kpi = "N01926",
 #'   municipality = "Haninge",
 #'   year = 2025
 #' )
-#' }
 #'
 #' @export
 get_from_kolada <- function(
@@ -3002,11 +2984,10 @@ get_from_kolada <- function(
 #' @return A data.frame with KPI metadata.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' search_kpi()
 #' search_kpi("preschool")
 #' search_kpi(c("N01926", "N17448"))
-#' }
 #'
 #' @export
 search_kpi <- function(
@@ -3029,11 +3010,10 @@ search_kpi <- function(
 #' @return A data.frame with municipalities and regions.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' get_municipalities()
 #' get_municipalities(type = "K")
 #' get_municipalities(search = "Han")
-#' }
 #'
 #' @export
 get_municipalities <- function(
@@ -3060,7 +3040,7 @@ get_municipalities <- function(
 #' @return A data.frame with available years.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' available_years(
 #'   kpi = "N01926",
 #'   municipality = "Haninge"
@@ -3099,12 +3079,11 @@ available_years <- function(
 #' @return A data.frame with the latest available observation.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' latest_value(
 #'   kpi = "N01926",
 #'   municipality = "Haninge"
 #' )
-#' }
 #'
 #' @export
 latest_value <- function(
@@ -3205,7 +3184,6 @@ change <- function(
 #'   of observation and the Kolada group used for the comparison.
 #'
 #' @examples
-#' \dontrun{
 #'
 #' # Compare with municipalities in the same county
 #' get_comparison(
@@ -3247,7 +3225,6 @@ change <- function(
 #'   area = "preschool"
 #' )
 #'
-#' }
 #'
 #' @export
 get_comparison <- function(
@@ -3465,7 +3442,7 @@ get_comparison <- function(
 #'   is specified, KPI values at unit level.
 #'
 #' @examples
-#' \dontrun{
+#'
 #' # Get all preschools in Haninge
 #' get_units(
 #'   activity = "preschool",
@@ -3485,7 +3462,7 @@ get_comparison <- function(
 #'   kpi = "N11808",
 #'   year = 2025
 #' )
-#' }
+#'
 #'
 #' @export
 get_units <- function(

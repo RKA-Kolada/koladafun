@@ -22,7 +22,7 @@ Multiple words within a query are combined with AND.
 Multiple queries are combined with OR.
 }
 \examples{
-\dontrun{
+\donttest{
 search_kpi()
 search_kpi("preschool")
 search_kpi(c("N01926", "N17448"))

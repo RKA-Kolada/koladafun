@@ -38,7 +38,7 @@ Funktionen kan användas för en eller flera kommuner,
 regioner och nyckeltal.
 }
 \examples{
-\dontrun{
+\donttest{
 
 forandring(
   nyckeltal = "N01926",

@@ -51,7 +51,7 @@ county, the same SKR municipality group, the same population group,
 or a group of similar municipalities.
 }
 \examples{
-\dontrun{
+\donttest{
 
 # Compare with municipalities in the same county
 get_comparison(

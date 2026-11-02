@@ -21,7 +21,7 @@ A data.frame with available years.
 English wrapper for \code{\link[=tillgangliga_ar]{tillgangliga_ar()}}.
 }
 \examples{
-\dontrun{
+\donttest{
 available_years(
   kpi = "N01926",
   municipality = "Haninge"

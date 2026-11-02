@@ -39,7 +39,7 @@ Det senaste året bestäms separat för varje kombination av
 nyckeltal, område och kön.
 }
 \examples{
-\dontrun{
+\donttest{
 senaste_varde(
   nyckeltal = "N01926",
   kommun = "Haninge"
