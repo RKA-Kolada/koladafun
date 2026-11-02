@@ -91,7 +91,7 @@ properties \tab V60
 }
 }
 \examples{
-\donttest{
+
 # Get all preschools in Haninge
 get_units(
   activity = "preschool",
@@ -111,6 +111,6 @@ get_units(
   kpi = "N11808",
   year = 2025
 )
-}
+
 
 }

@@ -1461,6 +1461,8 @@ forandring <- function(
 #'   jamforelse = "invånarantal"
 #' )
 #'
+#' # Jämför med liknande kommuner via interaktiv meny
+#' # Kör interaktivt:
 #' hamta_jamforelse(
 #'   nyckeltal = "N01926",
 #'   kommun = "Ludvika",
@@ -3210,6 +3212,7 @@ change <- function(
 #' )
 #'
 #' # Compare with similar municipalities using the interactive menu
+#' # Run interactively:
 #' get_comparison(
 #'   kpi = "N01926",
 #'   municipality = "Ludvika",

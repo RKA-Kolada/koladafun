@@ -34,11 +34,10 @@ A data.frame with the latest available observation.
 English wrapper for \code{\link[=senaste_varde]{senaste_varde()}}.
 }
 \examples{
-\donttest{
+
 latest_value(
   kpi = "N01926",
   municipality = "Haninge"
 )
-}
 
 }

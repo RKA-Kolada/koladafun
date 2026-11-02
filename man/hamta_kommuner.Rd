@@ -20,11 +20,10 @@ Hämtar en lista över kommuner och regioner från Kolada.
 Resultatet kan filtreras på områdestyp eller namn/kod.
 }
 \examples{
-\donttest{
+
 hamta_kommuner()
 hamta_kommuner(typ = "K")
 hamta_kommuner(typ = "R")
 hamta_kommuner(sok = "Han")
-}
 
 }

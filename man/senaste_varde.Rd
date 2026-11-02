@@ -39,7 +39,7 @@ Det senaste året bestäms separat för varje kombination av
 nyckeltal, område och kön.
 }
 \examples{
-\donttest{
+
 senaste_varde(
   nyckeltal = "N01926",
   kommun = "Haninge"
@@ -50,6 +50,6 @@ senaste_varde(
   kommun = "Haninge",
   bortfall = TRUE
 )
-}
+
 
 }

@@ -54,7 +54,6 @@ SKR-kommungrupp, en grupp utifrån invånarantal eller någon av
 Koladas grupper för liknande kommuner.
 }
 \examples{
-\donttest{
 
 hamta_jamforelse(
   nyckeltal = "N01926",
@@ -76,6 +75,8 @@ hamta_jamforelse(
   jamforelse = "invånarantal"
 )
 
+# Jämför med liknande kommuner via interaktiv meny
+# Kör interaktivt:
 hamta_jamforelse(
   nyckeltal = "N01926",
   kommun = "Ludvika",
@@ -89,7 +90,5 @@ hamta_jamforelse(
   ar = 2025,
   verksamhet = "förskola"
 )
-
-}
 
 }

@@ -83,7 +83,7 @@ fastigheter \tab V60
 }
 }
 \examples{
-\donttest{
+
 # Hämta alla förskolor i Haninge
 hamta_enheter(
   verksamhet = "Förskola",
@@ -111,6 +111,5 @@ hamta_enheter(
   ar = 2025,
   sok = "Montessori"
 )
-}
 
 }

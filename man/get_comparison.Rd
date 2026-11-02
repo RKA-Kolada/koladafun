@@ -51,7 +51,6 @@ county, the same SKR municipality group, the same population group,
 or a group of similar municipalities.
 }
 \examples{
-\donttest{
 
 # Compare with municipalities in the same county
 get_comparison(
@@ -78,6 +77,7 @@ get_comparison(
 )
 
 # Compare with similar municipalities using the interactive menu
+# Run interactively:
 get_comparison(
   kpi = "N01926",
   municipality = "Ludvika",
@@ -93,6 +93,5 @@ get_comparison(
   area = "preschool"
 )
 
-}
 
 }

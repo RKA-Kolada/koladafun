@@ -38,7 +38,6 @@ Funktionen kan användas för en eller flera kommuner,
 regioner och nyckeltal.
 }
 \examples{
-\donttest{
 
 forandring(
   nyckeltal = "N01926",
@@ -56,6 +55,5 @@ forandring(
   kon = "T"
 )
 
-}
 
 }

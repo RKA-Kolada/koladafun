@@ -28,11 +28,11 @@ nyckeltal i Kolada.
 \examples{
 \donttest{
 tillgangliga_ar("N01926")
+}
 
 tillgangliga_ar(
   "N01926",
   kommun = "Haninge"
 )
-}
 
 }

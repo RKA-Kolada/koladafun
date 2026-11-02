@@ -39,12 +39,11 @@ A data.frame with data from Kolada.
 English wrapper for \code{\link[=hamta_fran_kolada]{hamta_fran_kolada()}}.
 }
 \examples{
-\donttest{
+
 get_from_kolada(
   kpi = "N01926",
   municipality = "Haninge",
   year = 2025
 )
-}
 
 }
