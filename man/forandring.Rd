@@ -47,6 +47,7 @@ forandring(
   kon = "T"
 )
 
+\donttest{
 forandring(
   nyckeltal = "N01926",
   kommuntyp = "K",
@@ -54,6 +55,6 @@ forandring(
   till = 2025,
   kon = "T"
 )
-
+}
 
 }

@@ -1251,6 +1251,7 @@ senaste_varde <- function(
 #'   kon = "T"
 #' )
 #'
+#'\donttest{
 #' forandring(
 #'   nyckeltal = "N01926",
 #'   kommuntyp = "K",
@@ -1258,7 +1259,7 @@ senaste_varde <- function(
 #'   till = 2025,
 #'   kon = "T"
 #' )
-#'
+#'}
 #'
 #' @export
 forandring <- function(
