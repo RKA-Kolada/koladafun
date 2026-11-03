@@ -75,14 +75,15 @@ hamta_jamforelse(
   jamforelse = "invånarantal"
 )
 
+\donttest{
 # Jämför med liknande kommuner via interaktiv meny
-# Kör interaktivt:
 hamta_jamforelse(
   nyckeltal = "N01926",
   kommun = "Ludvika",
   ar = 2025,
   jamforelse = "liknande"
 )
+}
 
 hamta_jamforelse(
   nyckeltal = "N01926",

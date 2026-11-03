@@ -76,14 +76,15 @@ get_comparison(
   comparison = "population"
 )
 
+\donttest{
 # Compare with similar municipalities using the interactive menu
-# Run interactively:
 get_comparison(
   kpi = "N01926",
   municipality = "Ludvika",
   year = 2025,
   comparison = "similar"
 )
+}
 
 # Specify the service area directly
 get_comparison(
