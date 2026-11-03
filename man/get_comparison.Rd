@@ -76,7 +76,7 @@ get_comparison(
   comparison = "population"
 )
 
-\donttest{
+\dontrun{
 # Compare with similar municipalities using the interactive menu
 get_comparison(
   kpi = "N01926",

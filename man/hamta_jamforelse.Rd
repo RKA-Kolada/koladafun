@@ -75,7 +75,7 @@ hamta_jamforelse(
   jamforelse = "invånarantal"
 )
 
-\donttest{
+\dontrun{
 # Jämför med liknande kommuner via interaktiv meny
 hamta_jamforelse(
   nyckeltal = "N01926",

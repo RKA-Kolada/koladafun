@@ -1462,7 +1462,7 @@ forandring <- function(
 #'   jamforelse = "invånarantal"
 #' )
 #'
-#'\donttest{
+#'\dontrun{
 #' # Jämför med liknande kommuner via interaktiv meny
 #' hamta_jamforelse(
 #'   nyckeltal = "N01926",
@@ -3213,7 +3213,7 @@ change <- function(
 #'   comparison = "population"
 #' )
 #'
-#'\donttest{
+#'\dontrun{
 #' # Compare with similar municipalities using the interactive menu
 #' get_comparison(
 #'   kpi = "N01926",
