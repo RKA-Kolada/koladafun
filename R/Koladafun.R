@@ -1952,8 +1952,8 @@ hamta_jamforelse <- function(
 
       if (!interactive()) {
         stop(
-          "Ange 'verksamhet' för att välja jämförelsegrupp ",
-          "vid icke-interaktiv körning.",
+          "Ange 'verksamhet' f\u00f6r att v\u00e4lja j\u00e4mf\u00f6relsegrupp ",
+          "vid icke-interaktiv k\u00f6rning.",
           call. = FALSE
         )
       }
@@ -1961,13 +1961,13 @@ hamta_jamforelse <- function(
       val <- utils::menu(
         choices = meny_text,
         title = paste0(
-          "Välj grupp för liknande kommuner för ",
+          "V\u00e4lj grupp f\u00f6r liknande kommuner f\u00f6r ",
           kommun_namn
         )
       )
 
       if (val == 0) {
-        stop("Ingen jämförelsegrupp valdes.", call. = FALSE)
+        stop("Ingen j\u00e4mf\u00f6relsegrupp valdes.", call. = FALSE)
       }
 
       vald_grupp <- liknande_grupper[
