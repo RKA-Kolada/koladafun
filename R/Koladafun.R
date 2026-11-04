@@ -3727,6 +3727,6 @@ get_units <- function(
 #' @section More information:
 #'
 #' README and source code are available on GitHub:
-#' \url{https://github.com/RKAkolada/koladafun}
+#' \url{https://github.com/RKA-Kolada/koladafun}
 #'
 "_PACKAGE"

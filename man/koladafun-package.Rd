@@ -44,14 +44,14 @@ Paketet kan användas med både svenska och engelska funktionsnamn.
 
 
 README and source code are available on GitHub:
-\url{https://github.com/RKAkolada/koladafun}
+\url{https://github.com/RKA-Kolada/koladafun}
 }
 
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/RKAKolada/koladafun}
-  \item Report bugs at \url{https://github.com/RKAKolada/koladafun/issues}
+  \item \url{https://github.com/RKA-Kolada/koladafun}
+  \item Report bugs at \url{https://github.com/RKA-Kolada/koladafun/issues}
 }
 
 }
