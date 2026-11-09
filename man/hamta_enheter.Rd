@@ -86,30 +86,8 @@ fastigheter \tab V60
 
 # Hämta alla förskolor i Haninge
 hamta_enheter(
-  verksamhet = "Förskola",
-  kommun = "Haninge"
-)
-
-# Samma sak med V-kod och kommunkod
-hamta_enheter(
   verksamhet = "V11",
   kommun = "0136"
-)
-
-# Hämta även nyckeltalsvärden
-hamta_enheter(
-  verksamhet = "V11",
-  kommun = "0136",
-  nyckeltal = "N11808",
-  ar = 2025
-)
-
-#' # Hämta nyckelord
-hamta_enheter(
-  verksamhet = "V11",
-  nyckeltal = "N11808",
-  ar = 2025,
-  sok = "Montessori"
 )
 
 }

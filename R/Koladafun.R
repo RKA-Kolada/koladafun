@@ -2270,30 +2270,8 @@ hamta_jamforelse <- function(
 #'
 #' # Hämta alla förskolor i Haninge
 #' hamta_enheter(
-#'   verksamhet = "Förskola",
-#'   kommun = "Haninge"
-#' )
-#'
-#' # Samma sak med V-kod och kommunkod
-#' hamta_enheter(
 #'   verksamhet = "V11",
 #'   kommun = "0136"
-#' )
-#'
-#' # Hämta även nyckeltalsvärden
-#' hamta_enheter(
-#'   verksamhet = "V11",
-#'   kommun = "0136",
-#'   nyckeltal = "N11808",
-#'   ar = 2025
-#' )
-#'
-#' #' # Hämta nyckelord
-#' hamta_enheter(
-#'   verksamhet = "V11",
-#'   nyckeltal = "N11808",
-#'   ar = 2025,
-#'   sok = "Montessori"
 #' )
 #'
 #' @export
@@ -3196,41 +3174,6 @@ change <- function(
 #'   year = 2025,
 #'   comparison = "county"
 #' )
-#'
-#' # Compare with the same SKR municipality group
-#' get_comparison(
-#'   kpi = "N01926",
-#'   municipality = "Ludvika",
-#'   year = 2025,
-#'   comparison = "municipality_group"
-#' )
-#'
-#' # Compare with municipalities in the same population group
-#' get_comparison(
-#'   kpi = "N01926",
-#'   municipality = "Ludvika",
-#'   year = 2025,
-#'   comparison = "population"
-#' )
-#'
-#'\dontrun{
-#' # Compare with similar municipalities using the interactive menu
-#' get_comparison(
-#'   kpi = "N01926",
-#'   municipality = "Ludvika",
-#'   year = 2025,
-#'   comparison = "similar"
-#' )
-#'}
-#'
-#' # Specify the service area directly
-#' get_comparison(
-#'   kpi = "N01926",
-#'   municipality = "Ludvika",
-#'   year = 2025,
-#'   area = "preschool"
-#' )
-#'
 #'
 #' @export
 get_comparison <- function(

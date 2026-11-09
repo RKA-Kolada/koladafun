@@ -1049,6 +1049,17 @@ get_comparison(
 )
 ```
 
+# Compare with municipalities in the same population group
+
+```r
+get_comparison(
+  kpi = "N01926",
+  municipality = "Ludvika",
+  year = 2025,
+  comparison = "population"
+)
+```
+
 #### Compare with similar municipalities
 
 ```r

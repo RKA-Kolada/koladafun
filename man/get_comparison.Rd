@@ -60,39 +60,4 @@ get_comparison(
   comparison = "county"
 )
 
-# Compare with the same SKR municipality group
-get_comparison(
-  kpi = "N01926",
-  municipality = "Ludvika",
-  year = 2025,
-  comparison = "municipality_group"
-)
-
-# Compare with municipalities in the same population group
-get_comparison(
-  kpi = "N01926",
-  municipality = "Ludvika",
-  year = 2025,
-  comparison = "population"
-)
-
-\dontrun{
-# Compare with similar municipalities using the interactive menu
-get_comparison(
-  kpi = "N01926",
-  municipality = "Ludvika",
-  year = 2025,
-  comparison = "similar"
-)
-}
-
-# Specify the service area directly
-get_comparison(
-  kpi = "N01926",
-  municipality = "Ludvika",
-  year = 2025,
-  area = "preschool"
-)
-
-
 }
